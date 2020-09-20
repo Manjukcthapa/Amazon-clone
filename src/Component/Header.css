@@ -29,3 +29,42 @@
     border:none;
     width:100%
 }
+
+.header_nav{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+
+.header-link{
+    color:white;
+    text-decoration: none;
+}
+
+.header_option{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.option-one{
+font-size:10px;
+}
+.option-two{
+    font-size: 13px;
+    font-weight: 800;
+
+}
+
+.header-optionBasket{
+    display:flex;
+    align-items: center;
+
+}
+
+.basket_coun{
+  margin-left: 10px;
+  margin-right:10px;  
+}
+
