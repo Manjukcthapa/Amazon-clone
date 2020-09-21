@@ -1,31 +1,42 @@
 import React from "react";
-import "./Product.css"
+import "./Product.css";
+import { useStateValue } from "../StateProvider";
 
 function Product({ id, title, price, rating, image }) {
+  const [{}, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    //Add item to basket...
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        price: price,
+        rating: rating,
+        image: image,
+      },
+    });
+  };
   return (
     <div className="product">
-        <div className="product-info">
-      <p>{title}</p>
-      <p className="product-price">
-        <small>$</small>
-        <strong>{price}</strong>
-      </p>
-      <div className="product_rating">
-        {
-          Array(rating)
-          .fill()
-          .map((_) => {
-            return <p>⭐</p>;
-          })
-        }
+      <div className="product-info">
+        <p>{title}</p>
+        <p className="product-price">
+          <small>$</small>
+          <strong>{price}</strong>
+        </p>
+        <div className="product_rating">
+          {Array(rating)
+            .fill()
+            .map((_) => {
+              return <p>⭐</p>;
+            })}
         </div>
       </div>
       <img src={image} alt="" />
-      <button>Add to basket</button>
+      <button onClick={addToBasket}>Add to basket</button>
     </div>
   );
 }
 export default Product;
-
-
-//  Array(5) = [,,,,,]
