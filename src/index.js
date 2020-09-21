@@ -4,9 +4,10 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { StateProvider } from "./StateProvider";
+import reducer, {initialState} from "./reducer";
 ReactDOM.render(
   <React.StrictMode>
-    <StateProvider>
+    <StateProvider initialState={initialState} reduce={reducer}>
       <App />
     </StateProvider>
   </React.StrictMode>,
