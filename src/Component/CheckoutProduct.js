@@ -1,11 +1,16 @@
-import React from "react"
+import React from "react";
 
-function CheckoutProduct (id, title, images, price, rating) {
-    return (
-        <div>
-<img src={images} src = ""/>
-        </div>
-    )
+function CheckoutProduct({ id, title, image, price, rating }) {
+  return (
+    <div className="checkoutProduct">
+      <p>{title}</p>
+      <img src={image} alt="" />
+      <p>
+        <small>$</small>
+        <strong>{price}</strong>
+      </p>
+    </div>
+  );
 }
 
-export default CheckoutProduct
+export default CheckoutProduct;
