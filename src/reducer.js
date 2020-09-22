@@ -1,6 +1,17 @@
 export const initialState = {
-  basket: [],
+  basket: [
+      {
+    id:"123434",
+    title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray",
+    rating:5,
+    price:324.99,
+    image:"https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-12-9-in-cellular-space-gray-03182020?fmt=pjpg&hei=520"
+  
+  },
+  ],
+
   user:null,
+  
 };
 
 const reducer =(state, action) =>{
