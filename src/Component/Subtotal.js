@@ -3,8 +3,8 @@ import './Subtotal.css'
 
 function Subtotal(){
     return(
-        <div>
-
+        <div className="subtotal">
+         <button>Proceed to Checkout</button>
         </div>
     )
 }
