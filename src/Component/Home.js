@@ -24,16 +24,6 @@ function Home() {
         }
       </div>
       
-      <div className="home-row">
-      <Product
-          id="123498"
-          title="Apple iMac (27-inch, 8GB RAM, 1TB Storage) Previous ModelApple iMac (27-inch, 8GB RAM, 1TB Storage) Previous Model "
-          rating={5}
-          price={654.99}
-          image="https://i.ebayimg.com/images/g/aEIAAOSwkupfEd2C/s-l640.png"
-          alt=""
-        />
-      </div>
     </div>
   );
 }

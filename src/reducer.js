@@ -33,18 +33,26 @@ const products = [
     rating:5,
     price:400.99,
     image:"https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/vostro_notebooks/14_3480/pdp/notebook-vostro-14-3480-3481-apj-emea-pdp-gallery-504x350.jpg?fmt=jpg&wid=570&hei=400"
+  },
+  {
+    id:"123432",
+    title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray",
+    rating:5,
+    price:1200.99,
+    image:"https://i.ebayimg.com/images/g/aEIAAOSwkupfEd2C/s-l640.png"
   }
 ]
 
 export const initialState = {
   basket: [
       {
-    id:"123434",
-    title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray",
+    id:"123456",
+    title:"Echo Glow - Multicolor smart lamp for kids - requires compatible Alexa device ",
     rating:5,
-    price:324.99,
-    image:"https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-12-9-in-cellular-space-gray-03182020?fmt=pjpg&hei=520"  
-  },
+    price:18.99,
+    image:"https://qvc.scene7.com/is/image/QVC/e/78/e305178.001?$aempdzoom$"
+  
+  }
   ],
   user:null,
   products: products,

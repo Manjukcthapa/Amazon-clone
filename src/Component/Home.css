@@ -13,10 +13,23 @@
    
 }
 
-.home-row{
+/* .home-row{
     display:flex;
     z-index:1;
     margin-left: 5px;
     margin-right: 5px;
+   
+} */
+
+.home-row{
+    display:flex;
+   flex-direction: row;
+   flex-wrap:wrap;
+   margin-left:80px;
+   margin-top: 20px;
+   margin-top: 20px;
+   z-index:1;
+   margin-left: 5px;
+   margin-right: 5px;
 }
 
