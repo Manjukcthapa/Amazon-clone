@@ -6,13 +6,15 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, searchTerm }, dispatch] = useStateValue();
 
-
-
-  const [search, setSearch] = useState("");
-
-  
+  const updateSearch = (e) => {
+    const searchTerm = e.target.value;
+    dispatch({
+      type: "UPDATE_SEARCH",
+      searchTerm: searchTerm
+    })
+  }
 
   return (
     <nav className="header">
@@ -24,7 +26,7 @@ function Header() {
         />
       </Link>
       <div className="header-search">
-        <input type="text" value={search} onChange={e =>setSearch(e.target.value)} className="header_searchInput" />
+        <input type="text" value={searchTerm} onChange={updateSearch} className="header_searchInput" />
         <SearchIcon className="header_searchIcon" />
       </div>
 

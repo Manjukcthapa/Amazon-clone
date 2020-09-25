@@ -48,7 +48,7 @@ export const initialState = {
   ],
   user:null,
   products: products,
- 
+  searchTerm: ""
 };
 
 export const getBasketTotal = (basket)  => 
@@ -77,14 +77,9 @@ const reducer =(state, action) =>{
       }
       return {...state, basket:newBasket};
       break;
-
-    //   case "FILTER_PRODUCT":
-       
-    //  const searchProduct = state.Products.filter((item) => {
-    //    return item.title.toLowerCase() == .toLowerCase()
-    //  })
-    //   return {...state, products:searchProduct};
-    //  break;
+    case "UPDATE_SEARCH":   
+      return {...state, searchTerm: action.searchTerm};
+     break;
 
     default:
       return state;

@@ -4,7 +4,9 @@ import "./Home.css";
 import { useStateValue } from "../StateProvider";
 
 function Home() {
-  const [{ products }, dispatch] = useStateValue();
+  const [{ products, searchTerm }] = useStateValue();
+
+  const filteredProduct = searchTerm.trim().length ? products.filter((item => item.title.toUpperCase().includes(searchTerm.toUpperCase()))) : products;
 
   return (
     <div className="home">
@@ -16,7 +18,7 @@ function Home() {
 
       <div className="home-row">
         {
-          products.map(item => {
+          filteredProduct.map((item, index) => {
             return <Product id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image}></Product>
           })
         }
