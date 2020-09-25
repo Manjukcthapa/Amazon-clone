@@ -1,3 +1,41 @@
+const products = [
+  {
+    id:"123456",
+    title:"Echo Glow - Multicolor smart lamp for kids - requires compatible Alexa device ",
+    rating:5,
+    price:18.99,
+    image:"https://qvc.scene7.com/is/image/QVC/e/78/e305178.001?$aempdzoom$"
+  },
+  {
+    id:"123434",
+    title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray ",
+    rating:5,
+    price:324.99,
+    image:"https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-12-9-in-cellular-space-gray-03182020?fmt=pjpg&hei=520"
+  },
+  {
+    id:"1234567",
+    title:"Blink Mini – Compact indoor plug-in smart security camera,  Works with Alexa – 2 cameras ",
+    rating:5,
+    price:64.99,
+    image:"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSJGEpoGs7k9mJyJQtKXyymb3Lq3nYQl-Tom9vlqVUWbTBnUhPt79D7xzejp8-T-ql25VaPjrtOcEJpgWg6VMX6UNcwWYe2"
+  },
+  {
+    id:"123446",
+    title:"Echo Show 8 Adjustable Stand - Black ",
+    rating:5,
+    price:24.99,
+    image:"https://i.ebayimg.com/images/g/A9oAAOSwk~Be-iK-/s-l1600.jpg"
+  },
+  {
+    id:"123487",
+    title:"2020 Newest HP 14 Inch Non-Touch Premium Laptop, AMD Athlon Silver 3050U up to 3.2",
+    rating:5,
+    price:400.99,
+    image:"https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/vostro_notebooks/14_3480/pdp/notebook-vostro-14-3480-3481-apj-emea-pdp-gallery-504x350.jpg?fmt=jpg&wid=570&hei=400"
+  }
+]
+
 export const initialState = {
   basket: [
       {
@@ -5,13 +43,12 @@ export const initialState = {
     title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray",
     rating:5,
     price:324.99,
-    image:"https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-12-9-in-cellular-space-gray-03182020?fmt=pjpg&hei=520"
-  
+    image:"https://ss7.vzw.com/is/image/VerizonWireless/ipad-pro-12-9-in-cellular-space-gray-03182020?fmt=pjpg&hei=520"  
   },
   ],
-
   user:null,
-  
+  products: products,
+ 
 };
 
 export const getBasketTotal = (basket)  => 
@@ -40,6 +77,15 @@ const reducer =(state, action) =>{
       }
       return {...state, basket:newBasket};
       break;
+
+    //   case "FILTER_PRODUCT":
+       
+    //  const searchProduct = state.Products.filter((item) => {
+    //    return item.title.toLowerCase() == .toLowerCase()
+    //  })
+    //   return {...state, products:searchProduct};
+    //  break;
+
     default:
       return state;
   }

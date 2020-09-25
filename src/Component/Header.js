@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState }  from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
 
-
 function Header() {
-const [{basket}] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+
+
+
+  const [search, setSearch] = useState("");
+
+  
 
   return (
     <nav className="header">
@@ -19,12 +24,12 @@ const [{basket}] = useStateValue();
         />
       </Link>
       <div className="header-search">
-        <input type="text" className="header_searchInput" />
+        <input type="text" value={search} onChange={e =>setSearch(e.target.value)} className="header_searchInput" />
         <SearchIcon className="header_searchIcon" />
       </div>
 
       <div className="header_nav">
-        <Link  to="/logIn" className="header-link">
+        <Link to="/logIn" className="header-link">
           <div className="header_option">
             <span className="option-one">Hello,</span>
             <span className="option-two">Sign In</span>
@@ -44,9 +49,8 @@ const [{basket}] = useStateValue();
         </Link>
         <Link to="/checkout" className="header-link">
           <div className="header-optionBasket">
-          <ShoppingBasketIcon className="shoppingBasketIcon" />
-  <span className="option-two basket_count">{basket?.length}</span>
-
+            <ShoppingBasketIcon className="shoppingBasketIcon" />
+            <span className="option-two basket_count">{basket?.length}</span>
           </div>
         </Link>
       </div>
