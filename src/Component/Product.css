@@ -12,6 +12,12 @@
 
 }
 
+@media (max-width:500px){
+  .product{
+    
+  }
+}
+
 .product_rating {
   display: flex;
 }
