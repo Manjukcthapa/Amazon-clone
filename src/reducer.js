@@ -36,7 +36,7 @@ const products = [
   },
   {
     id:"123432",
-    title:"New Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Gray",
+    title:"Apple iMac 21.5-inch 3.06GHz Core",
     rating:5,
     price:1200.99,
     image:"https://i.ebayimg.com/images/g/aEIAAOSwkupfEd2C/s-l640.png"
