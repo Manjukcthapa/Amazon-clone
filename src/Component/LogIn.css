@@ -3,7 +3,7 @@
   width:100px;
   background-color: black;
   margin-top: 20px;
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
  
 }
 
@@ -24,4 +24,45 @@ height:fit-content;
 flex-direction: column;
 padding:20px;
 border:1px solid lightgray;
+}
+
+.header1{
+  margin-bottom: 10px;
+}
+
+.header5{
+  margin-bottom: 5px;
+}
+
+.inputs{
+  height:30px;
+  margin-bottom: 5px;
+  background-color: white;
+  width:98%;
+}
+
+.para{
+  margin-top:15px ;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.signin-button{
+background-color: #f0c14b;
+border-radius: 2px;
+height:30px;
+border:1px;
+margin-top: 10px;
+border-color: #aB8734 #9c7e31;
+width:100%;
+}
+
+.register-button{
+  
+  border-radius: 2px;
+  height:30px;
+  border:1px;
+  margin-top: 10px;
+  border-color:darkgrey;
+  width:100%;
 }
