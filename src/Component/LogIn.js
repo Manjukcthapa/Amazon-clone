@@ -51,7 +51,7 @@ function LogIn() {
           Notice, our Cookies Notice, our Cookies and our interest-Based Add
           Notice.
         </p>
-        <button onClick={register} className="register-button">
+        <button onClick={register} className="amazonregister-button">
           Create Your Amazon Account
         </button>
       </div>

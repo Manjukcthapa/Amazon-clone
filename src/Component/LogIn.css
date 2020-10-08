@@ -57,12 +57,11 @@ border-color: #aB8734 #9c7e31;
 width:100%;
 }
 
-.register-button{
-  
+.amazonregister-button{
   border-radius: 2px;
   height:30px;
-  border:1px;
+  border:1px solid;
   margin-top: 10px;
-  border-color:darkgrey;
+  border-color: 1px solid darkgrey;
   width:100%;
 }
