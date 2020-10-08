@@ -16,7 +16,7 @@
 }
 
 .header_logo {
-  width: 50px;
+  width: 100px;
   object-fit: contain;
   margin-left: 20px;
   margin-right: 20px;
@@ -27,7 +27,7 @@
   .header_logo{
     margin-top: 4px;
     margin: auto;
-    margin-left: 0px;
+    margin-left: 20px;
   }
 }
 
@@ -42,9 +42,9 @@
   flex: 1;
 }
 @media (max-width:500px){
-  .header-searchinput{
-    width:100%;
-    margin-top: 200px;
+  .header-search{
+    width:10px;
+    margin-top: 80px;
     margin-bottom: 20px;
     margin-right: 90px;
   }
@@ -62,23 +62,11 @@
   justify-content: space-evenly;
 }
 
-@media (max-width:500px){
-  .header_nav{
-    margin-right: 200px;
-    margin-left: 2px;
-  }
-}
+
 
 .header-link {
   color: white;
   text-decoration: none;
-}
-
-@media (max-width:500px){
-  .header_nav{
-    padding-right: 2px;
-   
-  }
 }
 
 .header_option {
@@ -86,13 +74,6 @@
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-@media (max-width:500px){
-  .option-two{
-   font-size:2px;
-   
-  }
 }
 
 .option-one {
