@@ -12,7 +12,6 @@ const firebaseApp = firebase.initializeApp({
   measurementId: process.env.REACT_APP_MEASUREMENTID,
 });
 
-console.log(process.env.REACT_APP_API_KEY, 'this is api key')
 const auth = firebase.auth();
 
 export { auth };
