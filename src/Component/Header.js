@@ -1,20 +1,27 @@
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../StateProvider";
+import { auth } from "./Firebase";
 
 function Header() {
-  const [{ basket, searchTerm }, dispatch] = useStateValue();
+  const [{ basket, searchTerm, user }, dispatch] = useStateValue();
 
   const updateSearch = (e) => {
     const searchTerm = e.target.value;
     dispatch({
       type: "UPDATE_SEARCH",
-      searchTerm: searchTerm
-    })
-  }
+      searchTerm: searchTerm,
+    });
+  };
+
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <nav className="header">
@@ -26,15 +33,20 @@ function Header() {
         />
       </Link>
       <div className="header-search">
-        <input type="text" value={searchTerm} onChange={updateSearch} className="header_searchInput" />
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={updateSearch}
+          className="header_searchInput"
+        />
         <SearchIcon className="header_searchIcon" />
       </div>
 
       <div className="header_nav">
-        <Link to="/logIn" className="header-link">
-          <div className="header_option">
-            <span className="option-one">Hello,</span>
-            <span className="option-two">Sign In</span>
+        <Link to={!user && "/logIn"} className="header-link">
+          <div onClick={login} className="header_option">
+            <span className="option-one">Hello {user?.email}</span>
+  <span className="option-two">{user? "Sign Out" : "Sign In"}</span>
           </div>
         </Link>
         <Link to="" className="header-link">
