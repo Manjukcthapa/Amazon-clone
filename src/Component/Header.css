@@ -87,6 +87,7 @@
 .header-optionBasket {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .basket_coun {
