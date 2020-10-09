@@ -1,3 +1,5 @@
+import { StateContext } from "./StateProvider";
+
 const products = [
   {
     id:"123456",
@@ -44,16 +46,7 @@ const products = [
 ]
 
 export const initialState = {
-  basket: [
-      {
-    id:"123456",
-    title:"Echo Glow - Multicolor smart lamp for kids - requires compatible Alexa device ",
-    rating:5,
-    price:18.99,
-    image:"https://qvc.scene7.com/is/image/QVC/e/78/e305178.001?$aempdzoom$"
-  
-  }
-  ],
+  basket: [],
   user:null,
   products: products,
   searchTerm: ""
@@ -65,6 +58,12 @@ basket?.reduce((amount,item) => item.price +amount, 0)
 const reducer =(state, action) =>{
     console.log(action)
   switch (action.type) {
+    case "SET_USER":
+      return{
+        ...state,
+        user:action.user,
+      }
+   
     case "ADD_TO_BASKET":
       //LOGIC FOR ADDING ITM TO BASKET
       return {
