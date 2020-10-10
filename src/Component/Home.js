@@ -12,6 +12,7 @@ function Home() {
   return (
     <div className="home">
       <HomeSlider></HomeSlider>
+      
       <div className="home-row">
         {
           filteredProduct.map((item, index) => {

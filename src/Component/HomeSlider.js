@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import 'react-alice-carousel/lib/alice-carousel.css';
-import "./Home.css";
+
 
 const imageList = [
     <img
@@ -11,7 +11,7 @@ const imageList = [
   />,
   <img
   className="banner-img"
-  src="https://steemitimages.com/0x0/https://cdn.steemitimages.com/DQmV2rrLJWC7SPyrSGsGnYX27ghTwn8XdVgu8PpwDe6QA6m/1500x300_Starts_Banner_v2._CB474351192_.gif"
+  src="https://images-na.ssl-images-amazon.com/images/G/01/Events/2020/APDHF2/XCM_CUTTLE_1255138_1316037_US_PD20_3296384_1500x375_2X_US_en.jpg"
   alt=""
 />,
 <img
