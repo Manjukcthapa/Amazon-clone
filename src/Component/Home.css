@@ -38,18 +38,12 @@
    
 }
 
-@media (max-width:500px){
-    .home-row{
-        width: 75%;
-        background-color: green;
 
-    }
-  }
 
 @media (max-width:500px){
     .home-row{
-        width: 75%;
-        background-color: green;
+        width: 50px;
+        
        
 
     }
