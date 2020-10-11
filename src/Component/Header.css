@@ -105,21 +105,11 @@
   margin-right: 10px;
 }
 
-@media (max-width:500px){
-  .shoppingBasketIcon{
-    margin-right: 10px;
-  }
-}
 
-@media (max-width:500px){
-  .header-optionBasket{
-    margin-right: 10px;
-  }
-}
 
 @media (max-width:500px){
   .basket_count{
-    margin-right: 30px;
-    margin-right: 3px;
+    margin-right: 60px;
+    
   }
 }
