@@ -27,7 +27,7 @@
   .header_logo{
     margin-top: 4px;
     margin: auto;
-    margin-left: 20px;
+   
   }
 }
 
@@ -57,9 +57,18 @@
   width: 100%;
 }
 
+
+
 .header_nav {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width:500px){
+  .header_nav {
+    
+    margin-right:5px;
+  }
 }
 
 
@@ -94,4 +103,23 @@
 .basket_coun {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media (max-width:500px){
+  .shoppingBasketIcon{
+    margin-right: 10px;
+  }
+}
+
+@media (max-width:500px){
+  .header-optionBasket{
+    margin-right: 10px;
+  }
+}
+
+@media (max-width:500px){
+  .basket_count{
+    margin-right: 30px;
+    margin-right: 3px;
+  }
 }
