@@ -2,6 +2,7 @@
     max-width:1500px;
     margin-left: 70px;
     margin-right: 70px;
+    
 }
  
 
@@ -33,5 +34,33 @@
    z-index:1;
    margin-left: 5px;
    margin-right: 5px;
+
+   
 }
+
+@media (max-width:500px){
+    .home-row{
+        width: 75%;
+        background-color: green;
+
+    }
+  }
+
+@media (max-width:500px){
+    .home-row{
+        width: 75%;
+        background-color: green;
+       
+
+    }
+  }
+
+  @media (max-width:500px){
+    .home{
+        width: 100%;
+       
+        margin-left:auto;
+    }
+  }
+
 
