@@ -56,7 +56,9 @@
   border: none;
   width: 100%;
 }
-
+ /* @media(max-width:500px){
+  .header margin-bottom: 500px;
+ } */
 
 
 .header_nav {
