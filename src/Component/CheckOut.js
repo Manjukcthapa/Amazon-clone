@@ -22,7 +22,7 @@ function CheckOut() {
           </div>
         ) : (
           <div>
-            <h3>{user.email}</h3>
+            <h3>Hello, {user.email}</h3>
             <h2 className="checkout-title"> Your Shopping Basket</h2>
 
             {basket.map((item, index) => (
